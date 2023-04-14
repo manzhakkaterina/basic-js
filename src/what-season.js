@@ -15,6 +15,7 @@ function getSeason(/* date */date) {
 let day = date.getDate();
 let month = date.getMonth();
 let year = date.getFullYear();
+if (!date) {throw new Error('Invalid date!')}
 if (isNaN(Date.parse(date))) {
   console.log(Date.parse(date));
   return 'Invalid date!';
