@@ -14,48 +14,49 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function transform(/* arr */arr) {
+  let arr1 = arr;
   let k = 0;
-  if (Array.isArray(arr)) {
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] === '--double-next') {
-    if (i === arr.length - 1) {
-      arr.pop();
+  if (Array.isArray(arr1)) {
+for (let i = 0; i < arr1.length; i++) {
+  if (arr1[i] === '--double-next') {
+    if (i === arr1.length - 1) {
+      arr1.pop();
     } else {
-      arr[i] = arr[i+1];
+      arr1[i] = arr1[i+1];
       }
     }
-  if (arr[i] === '--double-prev') {
+  if (arr1[i] === '--double-prev') {
     k++;
-    if (k > 1) { arr.splice(i, 1); }
+    if (k > 1) { arr1.splice(i, 1); }
     else {
     if (i === 0) {
-      arr.splice(i, 1);
+      arr1.splice(i, 1);
     } else {
-    arr[i] = arr[i-1];
+    arr1[i] = arr1[i-1];
     }
   }
   }
-  if (arr[i] === '--discard-next') {
+  if (arr1[i] === '--discard-next') {
     k++;
-    if (i === arr.length - 1) {
-      arr.pop();
+    if (i === arr1.length - 1) {
+      arr1.pop();
     } else { 
-    arr.splice(i, 2); i--;
+    arr1.splice(i, 2); i--;
       }
   }
-  if (arr[i] === '--discard-prev') {
+  if (arr1[i] === '--discard-prev') {
     k++;
-    if (k > 1) { arr.splice(i, 1); }
+    if (k > 1) { arr1.splice(i, 1); }
     else {
     if (i === 0) {
-    arr.splice(i, 1);
+    arr1.splice(i, 1);
     } else { 
-      arr.splice(i-1, 2); i--;
+      arr1.splice(i-1, 2); i--;
       }
     }
   }
 }
-return arr;
+return arr1;
   } else throw new Error("'arr' parameter must be an instance of the Array!");
   // remove line with error and write your code here
 }
