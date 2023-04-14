@@ -22,16 +22,16 @@ if (isNaN(Date.parse(date))) {
 else {
   if (month === 0 || month === 1 || month === 11) {
     return 'winter';
-  } else {throw new Error('Invalid date!')}
+  }
     if (month === 2 || month === 3 || month === 4) {
     return 'spring';
-  } else {throw new Error('Invalid date!')}
+  }
     if (month === 5 || month === 6 || month === 7) {
     return 'summer';
-  } else {throw new Error('Invalid date!')}
+  }
     if (month === 8 || month === 9 || month === 10) {
     return 'autumn';
-  } else {throw new Error('Invalid date!')}
+  }
 }
   // remove line with error and write your code here
 }
