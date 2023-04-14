@@ -18,7 +18,7 @@ function calculateHanoi(/* disksNumber, turnsSpeed */disksNumber, turnsSpeed) {
 let res1 = 0, res2 = 0;
 res1 = Math.pow(2, disksNumber) - 1;
 res2 = Math.floor((res1 * 3600) / turnsSpeed);
-return res1, res2;
+return '{ turns: ', res1, ', seconds: ', res2, ' }';
   // remove line with error and write your code here
 }
 
