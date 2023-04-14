@@ -14,7 +14,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function transform(/* arr */arr) {
-  let arr1 = arr;
+  let arr1 = arr.slice();
   let k = 0;
   //if (arr1.length === 50) return arr1;
   //if (arr1.length === 2) return arr1;
