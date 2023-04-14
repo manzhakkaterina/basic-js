@@ -22,7 +22,7 @@ if (isNaN(Date.parse(date))) {
   return 'Invalid date!';
   }
 else {
-  if (date instanceof Date == false) throw new Error("Invalid date!");
+  if (date instanceof Date && Object.getOwnProperty(date)) {
   if (month === 0 || month === 1 || month === 11) {
     return 'winter';
   }
@@ -35,6 +35,7 @@ else {
     if (month === 8 || month === 9 || month === 10) {
     return 'autumn';
   }
+  } return throw new Error("Invalid date!");
 }
   // remove line with error and write your code here
 }
