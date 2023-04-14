@@ -5,6 +5,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 let mas = [];
+let h = 0;
 const chainMaker = {
   getLength() {
     return mas.length;
@@ -16,7 +17,8 @@ const chainMaker = {
   },
   removeLink(/* position */position) {
       for (let i = 0; i < mas.length; i++) {
-    if (mas[i] === position) mas.splice(i, 1);
+    if (mas[i] === position) {mas.splice(i, 1); h++;}
+        if (h === 0) throw new Error("You can\'t remove incorrect link!");
   }
     // remove line with error and write your code here
   },
