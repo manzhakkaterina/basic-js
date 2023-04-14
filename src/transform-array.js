@@ -56,6 +56,7 @@ for (let i = 0; i < arr1.length; i++) {
     }
   }
 }
+    console.log(arr);
 return arr1;
   } else throw new Error("'arr' parameter must be an instance of the Array!");
   // remove line with error and write your code here
