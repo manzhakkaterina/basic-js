@@ -12,6 +12,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function getSeason(/* date */date) {
+  if (date === null) {return 'Unable to determine the time of year!'}
 let day = date.getDate();
 let month = date.getMonth();
 let year = date.getFullYear();
