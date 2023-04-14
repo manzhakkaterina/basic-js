@@ -15,7 +15,7 @@ const chainMaker = {
     // remove line with error and write your code here
   },
   removeLink(/* position */position) {
-      for (let i = 1; i < mas.length; i++) {
+      for (let i = 0; i < mas.length; i++) {
     if (mas[i] === position) mas.splice(i, 1);
   }
     // remove line with error and write your code here
