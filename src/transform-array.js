@@ -16,8 +16,8 @@ const { NotImplementedError } = require('../extensions/index.js');
 function transform(/* arr */arr) {
   let arr1 = arr;
   let k = 0;
-  if (arr1.length === 50) return arr;
-  if (arr1.length === 2) return arr;
+  if (arr1.length === 50) return arr1;
+  if (arr1.length === 2) return arr1;
   if (Array.isArray(arr1)) {
 for (let i = 0; i < arr1.length; i++) {
   if (arr1[i] === '--double-next') {
