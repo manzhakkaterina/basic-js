@@ -16,8 +16,8 @@ let day = date.getDate();
 let month = date.getMonth();
 let year = date.getFullYear();
 if (!date) {throw new Error('Invalid date!')}
-  if (!(date instanceof Date) { return 'Unable to determine the time of year!'}
 
+  if (Object.getOwnPropertyNames(date).length > 0) {throw new Error('Invalid date!')}
 if (isNaN(Date.parse(date))) {
   console.log(Date.parse(date));
   return 'Invalid date!';
