@@ -22,7 +22,7 @@ if (isNaN(Date.parse(date))) {
   return 'Invalid date!';
   }
 else {
-  if (date instanceof Date && Object.hasOwnProperty(date)) {
+  if (date instanceof Date) {
   if (month === 0 || month === 1 || month === 11) {
     return 'winter';
   }
