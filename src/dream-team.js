@@ -29,7 +29,7 @@ for (let i = 0; i < members.length; i++) {
   }
 return res.toUpperCase().split('').sort().join('');
   // remove line with error and write your code here
-
+}
 
 module.exports = {
   createDreamTeam
