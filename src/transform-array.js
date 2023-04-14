@@ -33,14 +33,14 @@ for (let i = 0; i < arr.length; i++) {
   if (arr[i] === '--discard-next') {
     if (i === arr.length - 1) {
       arr.pop();
-    } else {
+    } else { i--;
     arr.splice(i, 2);
       }
   }
   if (arr[i] === '--discard-prev') {
     if (i === 0) {
     arr.splice(i, 1);
-    } else { 
+    } else { i--;
       arr.splice(i-1, 2); 
       }
   }
