@@ -35,7 +35,7 @@ else {
     if (month === 8 || month === 9 || month === 10) {
     return 'autumn';
   }
-  } return throw new Error("Invalid date!");
+  } return 'Invalid date!';
 }
   // remove line with error and write your code here
 }
