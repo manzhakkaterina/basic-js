@@ -18,7 +18,6 @@ function transform(/* arr */arr) {
   if (Array.isArray(arr)) {
 for (let i = 0; i < arr.length; i++) {
   if (arr[i] === '--double-next') {
-    k++;
     if (i === arr.length - 1) {
       arr.pop();
     } else {
