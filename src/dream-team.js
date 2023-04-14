@@ -23,7 +23,7 @@ for (let i = 0; i < members.length; i++) {
     res = res + str[0];
   }
 }
-return res.split('').sort().join('');
+return res.toUpperCase().split('').sort().join('');
   // remove line with error and write your code here
 }
 
