@@ -22,7 +22,7 @@ for (let i = 0; i < arr.length; i++) {
   if (arr[i] === '--discard-prev') arr.splice(i-1, 2);
 }
 return arr;
-  } else return ''arr' parameter must be an instance of the Array!';
+  } else return "'arr' parameter must be an instance of the Array!";
   // remove line with error and write your code here
 }
 
