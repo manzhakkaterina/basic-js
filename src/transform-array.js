@@ -46,7 +46,7 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 return arr;
-  } else return "'arr' parameter must be an instance of the Array!";
+  } else throw new Error("'arr' parameter must be an instance of the Array!");
   // remove line with error and write your code here
 }
 
