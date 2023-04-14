@@ -21,6 +21,8 @@ for (let i = 0; i < members.length; i++) {
   if (typeof(members[i]) === 'string') {
     str = members[i].trim();
     res = res + str[0];
+  } else {
+    return false;
   }
 }
 return res.toUpperCase().split('').sort().join('');
