@@ -23,12 +23,12 @@ for (let i = 0; i < members.length; i++) {
     str = members[i].trim();
     res = res + str[0];
   } 
-}
-return res.toUpperCase().split('').sort().join('');
-  // remove line with error and write your code here
 } else {
     return false;
   }
+return res.toUpperCase().split('').sort().join('');
+  // remove line with error and write your code here
+} 
 
 module.exports = {
   createDreamTeam
