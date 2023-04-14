@@ -12,7 +12,8 @@ const chainMaker = {
     // remove line with error and write your code here
   },
   addLink(/* value */value) {
-    mas = mas + value;
+    if (value !== null) mas = mas + value;
+    else mas = mas + ' ';
     // remove line with error and write your code here
   },
   removeLink(/* position */position) {
