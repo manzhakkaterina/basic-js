@@ -14,9 +14,11 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function transform(/* arr */arr) {
+  let k = 0;
   if (Array.isArray(arr)) {
 for (let i = 0; i < arr.length; i++) {
   if (arr[i] === '--double-next') {
+    k++;
     if (i === arr.length - 1) {
       arr.pop();
     } else {
@@ -24,13 +26,18 @@ for (let i = 0; i < arr.length; i++) {
       }
     }
   if (arr[i] === '--double-prev') {
+    k++;
+    if (k > 1) { arr.splice(i, 1); }
+    else {
     if (i === 0) {
       arr.splice(i, 1);
     } else {
     arr[i] = arr[i-1];
     }
   }
+  }
   if (arr[i] === '--discard-next') {
+    k++;
     if (i === arr.length - 1) {
       arr.pop();
     } else { 
@@ -38,6 +45,7 @@ for (let i = 0; i < arr.length; i++) {
       }
   }
   if (arr[i] === '--discard-prev') {
+    k++;
     if (i === 0) {
     arr.splice(i, 1);
     } else { 
