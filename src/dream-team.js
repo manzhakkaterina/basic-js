@@ -16,18 +16,19 @@ const { NotImplementedError } = require('../extensions/index.js');
 function createDreamTeam(/* members */members) {
 let res = '';
 let str = '';
+  if (members.isArray()) {
 for (let i = 0; i < members.length; i++) {
   
   if (typeof(members[i]) === 'string') {
     str = members[i].trim();
     res = res + str[0];
-  } else {
-    return false;
-  }
+  } 
 }
 return res.toUpperCase().split('').sort().join('');
   // remove line with error and write your code here
-}
+} else {
+    return false;
+  }
 
 module.exports = {
   createDreamTeam
