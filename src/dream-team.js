@@ -16,7 +16,7 @@ const { NotImplementedError } = require('../extensions/index.js');
 function createDreamTeam(/* members */members) {
 let res = '';
 let str = '';
-  if (members.isArray()) {
+  if (Array.isArray(members)) {
 for (let i = 0; i < members.length; i++) {
   
   if (typeof(members[i]) === 'string') {
