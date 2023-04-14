@@ -19,7 +19,7 @@ let str = '';
 for (let i = 0; i < members.length; i++) {
   
   if (typeof(members[i]) === 'string') {
-    str = members[i];
+    str = members[i].trim();
     res = res + str[0];
   }
 }
