@@ -14,9 +14,11 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function transform(/* arr */arr) {
+    if (!Array.isArray(arr)) {
+    throw new Error("'arr' parameter must be an instance of the Array!");
+  }
   let arr1 = arr.slice();
   let k = 0;
-  if (Array.isArray(arr1) && arr1 !== null && typeof arr1 !== 'number' && arr1 !== undefined && typeof arr1 !== 'boolean') {
 for (let i = 0; i < arr1.length; i++) {
   if (arr1[i] === '--double-next') {
     if (i === arr1.length - 1) {
@@ -58,9 +60,7 @@ for (let i = 0; i < arr1.length; i++) {
 }
     console.log(arr);
 return arr1;
-
-  } else throw new Error("'arr' parameter must be an instance of the Array!");
-  // remove line with error and write your code here
+// remove line with error and write your code here
 }
 
 module.exports = {
