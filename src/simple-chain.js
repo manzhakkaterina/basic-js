@@ -11,7 +11,7 @@ const chainMaker = {
     return this.mas.length;
     // remove line with error and write your code here
   },
-  addLink(/* value */value) {
+  addLink(/* value */value = '') {
     this.mas.push(value);
     return this;
    // if (value !== null) mas = mas + value;
@@ -21,7 +21,7 @@ const chainMaker = {
   removeLink(/* position */position) {
         if (typeof position != 'number' || position <= 0 || position > this.mas.length) {
       this.mas = [];
-      throw new Error("You can\'t remove incorrect link!");
+      return throw new Error("You can\'t remove incorrect link!");
     }
     this.mas.splice(position-1, 1);
     return this;
