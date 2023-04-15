@@ -17,8 +17,6 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function repeater(/* str, options */str, options) {
 var objWithSpecificCoercion = 'STRING_OR_DEFAULT';
-var options.additionSeparator = '|';
-var options.separator = '+';
 var sep = '', sum = '';
 //var options = { repeatTimes: 0, separator: '', addition: '', additionRepeatTimes: 0, additionSeparator: '' };
 var res = '';
@@ -29,11 +27,11 @@ var res = '';
     console.log(res);
     return res;
     }
-  if (options.additionSeparator === undefined) options.additionSeparator = '';
+  if (options.additionSeparator === undefined) options.additionSeparator = '|';
   if (options.addition === undefined) options.addition = '';  
   if (options.repeatTimes === undefined) options.repeatTimes = 0;
   if (options.additionRepeatTimes === undefined) options.additionRepeatTimes = 0;
-  if (options.separator === undefined) options.separator = '';
+  if (options.separator === undefined) options.separator = '+';
   
   sep = options.addition + options.additionSeparator;
   if (options.additionRepeatTimes === 0) res = str + sep;
