@@ -19,13 +19,6 @@ function getSeason(/* date */date) {
     throw new Error("Invalid date!");
   }
 let month = date.getMonth();
-//if (Object.getOwnPropertyNames(date).length > 0) {throw new Error('Invalid date!')}
-//if (isNaN(Date.parse(date))) {
-//  console.log(Date.parse(date));
-//  return 'Invalid date!';
-//  }
-//else {
-//  if (date instanceof Date) {
   if (month === 0 || month === 1 || month === 11) {
     return 'winter';
   }
@@ -38,9 +31,6 @@ let month = date.getMonth();
     if (month === 8 || month === 9 || month === 10) {
     return 'autumn';
   }
-//  } return 'Invalid date!';
-//}
-  // remove line with error and write your code here
 }
 
 module.exports = {
