@@ -14,8 +14,6 @@ const chainMaker = {
   addLink(/* value */value) {
     this.mas.push(value === undefined ? "( )" : `( ${value} )`);
     return this;
-   // if (value !== null) mas = mas + value;
-  //  else mas = mas + ' ';
     // remove line with error and write your code here
   },
   removeLink(/* position */position) {
@@ -31,9 +29,6 @@ const chainMaker = {
     }
     this.values = filt;
     return this;
-  //    for (let i = 0; i < mas.length; i++) {
-  //  if (mas[i] === position) {mas.splice(i, 1); h++;}
-  //      if (h === 0) throw new Error("You can\'t remove incorrect link!");}
     // remove line with error and write your code here
   },
   reverseChain() {
@@ -45,17 +40,6 @@ const chainMaker = {
     const res = this.mas.join("~~");
     this.mas = [];
     return res;
-  //  for (let i = 0; i < this.mas.length; i++) {
-   //   if (i == 0) res = '( ' + this.mas[0] + ' )';
-  //    else res += '~~( ' + this.mas[i] + ' )';
-   // }
-  //  this.mas = [];
-  //  return res;
-  //    for (let j = 0; j < mas.length - 1; j++) {
-  //  res = '( ' + mas[j] + ' )~~';
-  //}
-  //res = res + '( ' + mas[mas.length] + ' )';
- // return res;
     // remove line with error and write your code here
   }
 };
