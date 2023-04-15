@@ -27,7 +27,7 @@ const chainMaker = {
       this.mas = [];
       throw new Error("You can't remove incorrect link!");
     }
-    this.values = filt;
+    this.mas = filt;
     return this;
     // remove line with error and write your code here
   },
