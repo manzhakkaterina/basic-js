@@ -24,6 +24,7 @@ var res = '';
   if (options.addition === undefined) options.addition = '';  
   if (options.repeatTimes === undefined) options.repeatTimes = 0;
   if (options.additionRepeatTimes === undefined) options.additionRepeatTimes = 0;
+  if (options.separator === undefined) options.separator = '';
   
   sep = options.addition + options.additionSeparator;
   if (options.additionRepeatTimes === 0) res = str + sep;
@@ -35,7 +36,9 @@ var res = '';
   if (options.repeatTimes !== 0) {
   res = res.repeat(options.repeatTimes); }
   
-  res = res.substr(0, res.length - options.separator.length);
+  if (options.separator !== undefined) {
+  res = res.substr(0, res.length - options.separator.length);}
+  
   return res;
   // remove line with error and write your code here
 }
