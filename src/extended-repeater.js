@@ -20,6 +20,13 @@ function repeater(/* str, options */str, options) {
 var sep = '', sum = '';
 //var options = { repeatTimes: 0, separator: '', addition: '', additionRepeatTimes: 0, additionSeparator: '' };
 var res = '';
+  if (options.separator === undefined && options.addition === undefined && options.additionSeparator === undefined) {
+    res = str + '+';
+    res = res.repeat(options.repeatTimes);
+    res = res.substr(0, res.length - 1);
+    console.log(res);
+    return res;
+    }
   if (options.additionSeparator === undefined) options.additionSeparator = '';
   if (options.addition === undefined) options.addition = '';  
   if (options.repeatTimes === undefined) options.repeatTimes = 0;
