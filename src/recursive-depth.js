@@ -20,15 +20,21 @@ function sum(arr1) {
   console.log(arr1, arr1.length);
   for (let j = 0; j < arr1.length; j++) {
   if (Array.isArray(arr1[j])) {
+    if (arr1[j].length > 1) {
     count++;
   sum(arr1[j]);
+  } else {
+      count++; }
   }
 }
 }
 for (let i = 0; i < arr.length; i++) {
   if (Array.isArray(arr[i])) {
+    if (Array.isArray(arr[i])) {
     count++;
     sum(arr[i]);
+    } else {
+      count++; }
   }
 }
    return count; 
