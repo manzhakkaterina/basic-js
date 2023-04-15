@@ -19,7 +19,7 @@ function getCommonCharacterCount(/* s1, s2 */s1, s2) {
   for (let i = 0; i < s1.length; i++) {
     if (s2.search(s1[i]) !== -1) {
       num = s2.indexOf(s1[i]);
-      s2 = s2.substr(0, num-1) + s2.substr(num+1, s2.length);
+      s2 = s2.substr(0, num) + s2.substr(num+1, s2.length);
     }
   }
   return count-s2.length;
