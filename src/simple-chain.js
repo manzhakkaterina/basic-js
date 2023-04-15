@@ -21,7 +21,7 @@ const chainMaker = {
   removeLink(/* position */position) {
         if (typeof position != 'number' || position <= 0 || position > this.mas.length) {
       this.mas = [];
-      return throw new Error("You can\'t remove incorrect link!");
+      throw new Error("You can\'t remove incorrect link!");
     }
     this.mas.splice(position-1, 1);
     return this;
