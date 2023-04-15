@@ -16,7 +16,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function repeater(/* str, options */str, options) {
-//var str = '';
+var objWithSpecificCoercion = 'STRING_OR_DEFAULT';
 var sep = '', sum = '';
 //var options = { repeatTimes: 0, separator: '', addition: '', additionRepeatTimes: 0, additionSeparator: '' };
 var res = '';
