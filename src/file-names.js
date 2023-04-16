@@ -23,7 +23,7 @@ function renameFiles(/* names */names) {
     for (let j = 0; j < i; j++) {
       if (res[j] === res[i]) {
         count++;
-        res[i] = file + count;
+        res[i] = `${file}(${count})`;
       }
     }
     count = 0;
