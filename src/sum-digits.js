@@ -21,7 +21,7 @@ function getSumOfDigits(/* n */n) {
    }
    str = num.toString();
    }
-   return str;
+   return Number(str);
   // remove line with error and write your code here
 }
 
